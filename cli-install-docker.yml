@@ -43,6 +43,7 @@
       apt:
         pkg: docker-ce
 
+      # TODO: perhaps `newgrp docker` command can be used to avoid re-login?
     - name: allow running docker without sudo (re-login to take effect)
       user:
         name: "{{ ansible_user }}"
